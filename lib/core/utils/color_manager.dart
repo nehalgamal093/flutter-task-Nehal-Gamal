@@ -1,0 +1,14 @@
+import 'dart:ui';
+
+class ColorManager{
+  static Color darkBlueClr = Color(0xff090F1F);
+  static Color greyClr = Color(0x80090f1f);
+  static Color darkGreyClr = Color(0x80000000);
+  static Color blueClr = Color(0xff0062E2);
+  static Color orangeClr = Color(0xffF95B1C);
+  static Color greenClr = Color(0xff3A813F);
+  static Color lightGreyClr = Color(0x80090f1f);
+  static Color veryLightGrey = Color(0x1A000000);
+  static Color lightOrangeClr = Color(0xdf95b1c);
+  static Color redClr = Color(0xffFF4144);
+}
