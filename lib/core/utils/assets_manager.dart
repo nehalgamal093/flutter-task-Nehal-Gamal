@@ -13,7 +13,18 @@ class AssetsManager{
   static const String cart = 'assets/icons/cart.png';
   static const String favorite = 'assets/icons/favorite.png';
   static const String fire = 'assets/icons/fire.png';
+  static const String arrow = 'assets/icons/arrow.png';
+  static const String globe = 'assets/icons/globe.png';
+  static const String medal = 'assets/icons/medal.png';
+  static const String pin = 'assets/icons/pin.png';
+  static const String rocket = 'assets/icons/rocket.png';
+  static const String acute = 'assets/icons/acute.png';
+  static const String chevronArrowBackward = 'assets/icons/chevron_arrow_backward.png';
+  static const String close = 'assets/icons/close.png';
+  static const String hand = 'assets/icons/hand.png';
+  static const String location = 'assets/icons/location.png';
   //images
   static const String meanWear = 'assets/images/men_wear.png';
   static const String shirt = 'assets/images/shirt.png';
+  static const String views = 'assets/images/views.png';
 }

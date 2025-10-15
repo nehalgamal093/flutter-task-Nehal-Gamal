@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:otex_app/core/utils/app_text_style.dart';
 import 'package:otex_app/core/utils/color_manager.dart';
 import 'package:otex_app/core/utils/strings_manager.dart';
+import 'package:otex_app/features/filteration/presentation/screens/filteration_screen.dart';
 import 'package:otex_app/features/home/presentation/screens/home_screen.dart';
+import 'package:otex_app/features/packages/presentation/screens/packages_screen.dart';
 
 import '../../../../core/utils/assets_manager.dart';
 
@@ -14,7 +16,7 @@ class CustomBottomNav extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(right: 16),
-        child: HomeScreen(),
+        child: FilterationScreen(),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 4,
