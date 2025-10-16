@@ -57,7 +57,7 @@ class FiltrationScreen extends StatelessWidget {
               StatusSection(),
               SizedBox(height: 81),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 6),
                 child: Container(
                   padding: const EdgeInsets.symmetric(vertical: 12),
                   decoration: BoxDecoration(

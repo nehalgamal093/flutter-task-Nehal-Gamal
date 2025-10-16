@@ -30,7 +30,7 @@ class SelectionWidget extends StatelessWidget {
         labelText,
         style: AppTextStyles.mediumTextStyle(
           fontSize: 14,
-          color: ColorManager.lightGreyClr,
+          color:isSelected ?ColorManager.cBlueColor : ColorManager.lightGreyClr,
         ),
       ),
     );

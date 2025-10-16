@@ -104,7 +104,7 @@ class DummyData {
         allEgypt: 1,
         specialAd: 1,
         fixAgentInG: 1,
-        selected: 1,
+        selected: 0,
         image: await ConvertImage.convertImage(AssetsManager.views1),
       ),
     ];

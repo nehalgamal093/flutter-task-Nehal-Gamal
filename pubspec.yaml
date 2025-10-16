@@ -87,7 +87,7 @@ flutter:
       fonts:
         - asset: assets/fonts/Tajawal-Medium.ttf
         - asset: assets/fonts/Tajawal-Bold.ttf
-        - asset: assets/fonts/Regular-Bold.ttf
+        - asset: assets/fonts/Tajawal-Regular.ttf
 
 
 

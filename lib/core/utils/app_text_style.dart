@@ -4,12 +4,16 @@ class AppTextStyles {
   static TextStyle regularTextStyle({
     double fontSize = 16,
     Color color = Colors.black,
+    TextDecoration decoration = TextDecoration.none,
   }) {
     return TextStyle(
       fontFamily: 'Tajawal',
       fontWeight: FontWeight.normal,
       fontSize: fontSize,
       color: color,
+      decoration: decoration,
+      decorationThickness: 2,
+      decorationColor: color,
     );
   }
 
@@ -17,8 +21,6 @@ class AppTextStyles {
     double fontSize = 16,
     Color color = Colors.black,
     TextDecoration decoration = TextDecoration.none,
-
-
   }) {
     return TextStyle(
       fontFamily: 'Tajawal',
@@ -45,7 +47,6 @@ class AppTextStyles {
       decoration: decoration,
       decorationThickness: 50,
       decorationColor: color,
-
     );
   }
 }

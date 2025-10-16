@@ -36,7 +36,7 @@ class PackageItem extends StatelessWidget {
                     package.name,
                     style: AppTextStyles.boldTextStyle(
                       fontSize: 16,
-                      color: ColorManager.bBlueClr,
+                      color:package.name == StringsManager.main?ColorManager.darkBlueClr: ColorManager.bBlueClr,
                     ),
                   ),
                   Spacer(),
@@ -140,10 +140,12 @@ class PackageItem extends StatelessWidget {
                         package.name == StringsManager.main
                             ? SizedBox()
                             : Text(
+                          textAlign: TextAlign.center,
                                 StringsManager.doubleViews,
                                 style: AppTextStyles.regularTextStyle(
                                   fontSize: 12,
                                   color: ColorManager.darkBlueClr,
+                                  decoration: TextDecoration.underline
                                 ),
                               ),
                       ],

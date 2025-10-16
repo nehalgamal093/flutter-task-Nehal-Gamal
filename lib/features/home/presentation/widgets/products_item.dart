@@ -74,7 +74,7 @@ class ProductsItem extends StatelessWidget {
                          color: ColorManager.redClr,
                        ),),
                        Flexible(
-                         flex: 1,
+                         flex: 2,
                          child: Text(
                            product.price,
                            style: AppTextStyles.mediumTextStyle(
@@ -90,7 +90,7 @@ class ProductsItem extends StatelessWidget {
                        ImageIcon(AssetImage(AssetsManager.favorite),size: 24,),
                      ],
                    ),
-
+                   SizedBox(height: 13),
                    Row(
                      children: [
                        ImageIcon(AssetImage(AssetsManager.fire), size: 8),
@@ -117,9 +117,10 @@ class ProductsItem extends StatelessWidget {
                        Spacer(),
 
                        Container(
-                         padding: const EdgeInsets.all(2),
+                         padding: const EdgeInsets.symmetric(horizontal: 5,vertical: 2),
                          decoration: BoxDecoration(
                            border: Border.all(color: ColorManager.veryLightGrey),
+                           borderRadius: BorderRadius.all(Radius.circular(4))
                          ),
                          child: Image.asset(AssetsManager.cart, width: 15),
                        ),
@@ -127,6 +128,7 @@ class ProductsItem extends StatelessWidget {
                        Image.asset(AssetsManager.logo, width: 15),
                      ],
                    ),
+                   SizedBox(height:9),
                  ],
                ),
              )

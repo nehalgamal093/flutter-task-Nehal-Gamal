@@ -6,7 +6,8 @@ import 'color_manager.dart';
 class AppTheme {
   static ThemeData themeData() {
     return ThemeData(
-      appBarTheme: AppBarThemeData(backgroundColor: ColorManager.whiteClr),
+
+      appBarTheme: AppBarThemeData(backgroundColor: ColorManager.whiteClr, scrolledUnderElevation: 0,),
       scaffoldBackgroundColor: ColorManager.whiteClr,
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: ColorManager.whiteClr,
