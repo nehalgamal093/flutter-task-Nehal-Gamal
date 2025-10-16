@@ -14,9 +14,9 @@ import '../../../../core/utils/app_text_style.dart';
 import '../../../../core/utils/assets_manager.dart';
 import '../../../../core/utils/strings_manager.dart';
 
-class FilterationScreen extends StatelessWidget {
-  const FilterationScreen({super.key});
-
+class FiltrationScreen extends StatelessWidget {
+  const FiltrationScreen({super.key});
+  static const String routeName = '/filtration';
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -24,10 +24,10 @@ class FilterationScreen extends StatelessWidget {
       appBar: AppBar(
         bottom: PreferredSize(
           preferredSize: Size(size.width, size.height * .05),
-          child: Directionality(
-            textDirection: TextDirection.rtl,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Directionality(
+              textDirection: TextDirection.rtl,
               child: Row(
                 children: [
                   ImageIcon(
@@ -57,59 +57,63 @@ class FilterationScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Directionality(
-        textDirection: TextDirection.rtl,
-        child: ListView(
-          children: [
-            MainLabel(text: StringsManager.category),
-            SizedBox(height: 12),
-            RealEstate(),
-            Divider(),
-            LocationSection(),
-            Divider(),
-            SizedBox(height: 20),
-            MainLabel(text: StringsManager.monthlyInstall),
-            MonthlyInstallments(),
-            MainLabel(text: StringsManager.type),
-            SizedBox(height: 12),
-            TypeSection(),
-            SizedBox(height: 20),
-            MainLabel(text: StringsManager.numberOfRooms),
-            SizedBox(height: 12),
-            RoomsNumber(),
-            SizedBox(height: 20),
-            MainLabel(text: StringsManager.price),
-            SizedBox(height: 12),
-            PriceSection(),
-            SizedBox(height: 20),
-            MainLabel(text: StringsManager.paymentMethod),
-            SizedBox(height: 12),
-            PaymentSection(),
-            SizedBox(height: 20),
-            MainLabel(text: StringsManager.status),
-            SizedBox(height: 12),
-            StatusSection(),
-            SizedBox(height: 81),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 12),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(32)),
-                  color: ColorManager.cBlueColor,
-                ),
-                child: Center(
-                  child: Text(
-                    StringsManager.watchResults,
-                    style: AppTextStyles.boldTextStyle(
-                      fontSize: 16,
-                      color: ColorManager.whiteClr,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Directionality(
+          textDirection: TextDirection.rtl,
+          child: ListView(
+            children: [
+              MainLabel(text: StringsManager.category),
+              SizedBox(height: 12),
+              RealEstate(),
+              Divider(),
+              LocationSection(),
+              Divider(),
+              SizedBox(height: 20),
+              MainLabel(text: StringsManager.monthlyInstall),
+              MonthlyInstallments(),
+              MainLabel(text: StringsManager.type),
+              SizedBox(height: 12),
+              TypeSection(),
+              SizedBox(height: 20),
+              MainLabel(text: StringsManager.numberOfRooms),
+              SizedBox(height: 12),
+              RoomsNumber(),
+              SizedBox(height: 20),
+              MainLabel(text: StringsManager.price),
+              SizedBox(height: 12),
+              PriceSection(),
+              SizedBox(height: 20),
+              MainLabel(text: StringsManager.paymentMethod),
+              SizedBox(height: 12),
+              PaymentSection(),
+              SizedBox(height: 20),
+              MainLabel(text: StringsManager.status),
+              SizedBox(height: 12),
+              StatusSection(),
+              SizedBox(height: 81),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(32)),
+                    color: ColorManager.cBlueColor,
+                  ),
+                  child: Center(
+                    child: Text(
+                      StringsManager.watchResults,
+                      style: AppTextStyles.boldTextStyle(
+                        fontSize: 16,
+                        color: ColorManager.whiteClr,
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-          ],
+              SizedBox(height: 20),
+            ],
+          ),
         ),
       ),
     );

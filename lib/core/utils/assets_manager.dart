@@ -26,5 +26,17 @@ class AssetsManager{
   //images
   static const String meanWear = 'assets/images/men_wear.png';
   static const String shirt = 'assets/images/shirt.png';
+  static const String shirt2 = 'assets/images/shirt2.png';
+  static const String shoes = 'assets/images/shoes.png';
   static const String views = 'assets/images/views.png';
+  static const String views1 = 'assets/images/views_1.png';
+  static const String views2 = 'assets/images/views_2.png';
+  static const String cosmetics = 'assets/images/cosmetics.png';
+  static const String mobile = 'assets/images/mobile.png';
+  static const String watch = 'assets/images/watch.png';
+
+
+  //packages
+  static const String highViews = 'assets/images/high_views.png';
+  static const String highValue = 'assets/images/offer_badge.png';
 }

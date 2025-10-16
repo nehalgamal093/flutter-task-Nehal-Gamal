@@ -1,6 +1,7 @@
 class StringsManager{
   static const String discover = 'أستكشف العروض';
   static const String all = 'الكل';
+  static const String allOffers = 'كل العروض';
   static const String clothes = 'ملابس';
   static const String accessories = 'اكسسوارات';
   static const String electronics = 'الكترونيات';
@@ -12,7 +13,7 @@ class StringsManager{
   static const String forAnyOffer = 'لأي عرض تطلبه دلوقتي !';
   static const String sold = 'تم بيع ';
   static const String jackOfWool = 'جاكيت من الصوف مناسب';
-  static const String main = 'الرئيسية';
+  static const String main = 'أساسية';
   static const String chat = 'محادثة';
   static const String addAd = 'أضف أعلان';
   static const String next = 'التالي';
@@ -53,4 +54,19 @@ class StringsManager{
   static const String twoRooms = 'غرفتين';
   static const String fiveRooms = '5 غرف+';
   static const String watchResults = 'شاهد 10,000+ نتائج';
+  static const String maiin = 'أساسية';
+  static const String extra = 'أكسترا';
+  static const String plus = 'بلس';
+  static const String superr ='سوبر';
+
+  //packages
+  static const String fixAgent = 'تثبيت فى مقاول صحى';
+  static const String expiration = 'صلاحية الأعلان 30 يوم';
+  static const String upList = 'رفع لأعلى القائمة كل 2 يوم';
+  static const String specialAd = 'أعلان مميز';
+  static const String allEgypt = 'ظهور فى كل محافظات مصر';
+  static const String next48Hour = ' (خلال ال48 ساعة القادمة)';
+  static const String fixAgentInG = 'تثبيت فى مقاول صحى فى الجهراء';
+  static const String doubleViews = 'ضعف عدد المشاهدات';
+
 }

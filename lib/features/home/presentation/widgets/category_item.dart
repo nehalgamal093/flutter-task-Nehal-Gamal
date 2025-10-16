@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:otex_app/core/utils/app_text_style.dart';
 import 'package:otex_app/core/utils/color_manager.dart';
+import 'package:otex_app/features/home/data/models/category.dart';
 
 class CategoryItem extends StatelessWidget {
-  const CategoryItem({super.key});
+  final Category category;
+  const CategoryItem({super.key,required this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class CategoryItem extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(12),
         child: Text(
-          'اكسسوارات',
+          category.name,
           style: AppTextStyles.mediumTextStyle(
             fontSize: 14,
             color: ColorManager.orangeClr,

@@ -10,12 +10,30 @@ class LocationSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     return ListTile(
-      leading: ImageIcon(AssetImage(AssetsManager.location,),color: ColorManager.darkBlueClr,),
-      title: Text(StringsManager.location,style: AppTextStyles.mediumTextStyle(fontSize: 14,color:ColorManager.darkBlueClr),),
-      subtitle: Text(StringsManager.villasForSale,style: AppTextStyles.regularTextStyle(fontSize: 12,color: ColorManager.darkGreyClr),),
-      trailing: ImageIcon(AssetImage(AssetsManager.chevronArrowBackward,),color: ColorManager.darkBlueClr,),
-
-    );;
+    return ListTile(
+      leading: ImageIcon(
+        AssetImage(AssetsManager.location),
+        color: ColorManager.darkBlueClr,
+      ),
+      title: Text(
+        StringsManager.location,
+        style: AppTextStyles.mediumTextStyle(
+          fontSize: 14,
+          color: ColorManager.darkBlueClr,
+        ),
+      ),
+      subtitle: Text(
+        StringsManager.villasForSale,
+        style: AppTextStyles.regularTextStyle(
+          fontSize: 12,
+          color: ColorManager.darkGreyClr,
+        ),
+      ),
+      trailing: ImageIcon(
+        AssetImage(AssetsManager.chevronArrowBackward),
+        color: ColorManager.darkBlueClr,
+      ),
+    );
+    ;
   }
 }

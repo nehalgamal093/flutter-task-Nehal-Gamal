@@ -4,8 +4,11 @@ import 'package:otex_app/core/utils/assets_manager.dart';
 import 'package:otex_app/core/utils/color_manager.dart';
 import 'package:otex_app/core/utils/strings_manager.dart';
 
+import '../../data/models/product.dart';
+
 class ProductsItem extends StatelessWidget {
-  const ProductsItem({super.key});
+  final Product product;
+  const ProductsItem({super.key,required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +24,7 @@ class ProductsItem extends StatelessWidget {
           textDirection: TextDirection.rtl,
           child: Column(
             children: [
-              Image.asset(AssetsManager.shirt),
+              Image.memory(product.image),
               SizedBox(height: 8),
 
              Container(
@@ -32,8 +35,7 @@ class ProductsItem extends StatelessWidget {
                      children: [
                        Flexible(
                          flex: 1,
-                         child: Text(
-                           ' جاكيت من الصوف مناسب',
+                         child: Text(product.name,
                            style: AppTextStyles.mediumTextStyle(
                              fontSize: 14,
                              color: ColorManager.darkBlueClr,
@@ -47,23 +49,26 @@ class ProductsItem extends StatelessWidget {
 
                    SizedBox(height: 13),
                    Row(
-                     crossAxisAlignment: CrossAxisAlignment.center,
+                     crossAxisAlignment: CrossAxisAlignment.end,
                      children: [
                        Text(
-                         '32,000,000جم',
+                         product.priceAfterDiscount,
                          style: AppTextStyles.mediumTextStyle(
                            fontSize: 14,
                            color: ColorManager.redClr,
                          ),
                          overflow: TextOverflow.ellipsis,
                        ),
-                       Text('/'),
+                       Text('/',style: AppTextStyles.mediumTextStyle(
+                         fontSize: 14,
+                         color: ColorManager.redClr,
+                       ),),
                        Flexible(
                          flex: 1,
                          child: Text(
-                           '60,000,000',
+                           product.price,
                            style: AppTextStyles.mediumTextStyle(
-                             fontSize: 12,
+                             fontSize: 14,
                              color: ColorManager.greyClr,
                              decoration: TextDecoration.lineThrough,
                            ),
@@ -71,7 +76,7 @@ class ProductsItem extends StatelessWidget {
                          ),
                        ),
                        SizedBox(width: 4),
-                       ImageIcon(AssetImage(AssetsManager.favorite)),
+                       ImageIcon(AssetImage(AssetsManager.favorite),size: 24,),
                      ],
                    ),
 

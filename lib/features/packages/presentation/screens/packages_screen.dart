@@ -3,11 +3,10 @@ import 'package:otex_app/core/utils/app_text_style.dart';
 import 'package:otex_app/core/utils/assets_manager.dart';
 import 'package:otex_app/core/utils/color_manager.dart';
 import 'package:otex_app/core/utils/strings_manager.dart';
-import 'package:otex_app/features/packages/presentation/widgets/custom_button.dart';
 import 'package:otex_app/features/packages/presentation/widgets/package_list.dart';
-import 'package:otex_app/features/packages/presentation/widgets/sales_team.dart';
 
 class PackagesScreen extends StatelessWidget {
+
   const PackagesScreen({super.key});
 
   @override
@@ -54,18 +53,8 @@ class PackagesScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: Column(
-          children: [
-            SizedBox(height: 20,),
-            Expanded(child: PackageList()),
-            SizedBox(height: 32,),
-            SalesTeam(),
-            Divider(),
-
-            CustomButton()
-          ],
-        ),
+        padding: const EdgeInsets.only(left: 16),
+        child:PackageList(),
       ),
     );
   }
