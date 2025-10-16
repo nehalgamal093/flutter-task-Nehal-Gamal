@@ -70,13 +70,13 @@ class DummyData {
     return [
       Package(
         name: StringsManager.main,
-        price: '3,000 ج.م',
+        price: '3,000',
         expiration: 1,
         image: await ConvertImage.convertImage(AssetsManager.views),
       ),
       Package(
         name: StringsManager.extra,
-        price: '3,000 ج.م',
+        price: '3,000',
         expiration: 1,
         upList: 1,
         fixAgent: 1,
@@ -85,7 +85,7 @@ class DummyData {
       ),
       Package(
         name: StringsManager.plus,
-        price: '3,000 ج.م',
+        price: '3,000',
         expiration: 1,
         upList: 1,
         fixAgent: 1,
@@ -97,7 +97,7 @@ class DummyData {
       ),
       Package(
         name: StringsManager.superr,
-        price: '3,000 ج.م',
+        price: '3,000',
         expiration: 1,
         upList: 1,
         fixAgent: 1,

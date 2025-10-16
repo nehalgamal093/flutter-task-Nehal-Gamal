@@ -59,7 +59,17 @@ class ProductsItem extends StatelessWidget {
                          ),
                          overflow: TextOverflow.ellipsis,
                        ),
-                       Text('/',style: AppTextStyles.mediumTextStyle(
+                       Flexible(
+                         flex: 1,
+                         child: Text(
+                           StringsManager.le,
+                           style: AppTextStyles.mediumTextStyle(
+                             fontSize: 14,color: ColorManager.redClr,
+                           ),
+                           overflow: TextOverflow.ellipsis,
+                         ),
+                       ),
+                       Text(StringsManager.slash,style: AppTextStyles.mediumTextStyle(
                          fontSize: 14,
                          color: ColorManager.redClr,
                        ),),
@@ -75,6 +85,7 @@ class ProductsItem extends StatelessWidget {
                            overflow: TextOverflow.ellipsis,
                          ),
                        ),
+
                        SizedBox(width: 4),
                        ImageIcon(AssetImage(AssetsManager.favorite),size: 24,),
                      ],
@@ -91,7 +102,7 @@ class ProductsItem extends StatelessWidget {
                          ),
                        ),
                        Text(
-                         '3.3k+',
+                         StringsManager.threeK,
                          style: AppTextStyles.regularTextStyle(
                            fontSize: 10,
                            color: ColorManager.lightGreyClr,

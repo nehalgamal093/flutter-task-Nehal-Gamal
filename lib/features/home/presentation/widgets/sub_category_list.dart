@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:otex_app/core/utils/strings_manager.dart';
 import 'package:otex_app/features/home/presentation/cubit/sub_categories_cubit/sub_categories_cubit.dart';
 import 'package:otex_app/features/home/presentation/widgets/sub_category_item.dart';
 
@@ -35,7 +36,7 @@ class SubCategoryList extends StatelessWidget {
               ),
             );
           }else{
-            return Text('Error');
+            return Text(StringsManager.error);
           }
 
         }

@@ -1,5 +1,6 @@
 import 'package:injectable/injectable.dart';
 import 'package:otex_app/core/utils/dummy_data.dart';
+import 'package:otex_app/core/utils/strings_manager.dart';
 import 'package:otex_app/features/home/data/models/product.dart';
 import 'package:otex_app/features/home/data/remote_ds/products_remote_ds.dart';
 import 'package:path_provider/path_provider.dart';
@@ -11,13 +12,11 @@ class ProductsRemoteDsImpl implements ProductsRemoteDS {
   @override
   Future<Database> openProductsDB() async {
     final documentsDirectory = await getApplicationDocumentsDirectory();
-    final path = p.join(documentsDirectory.path, 'products.db');
+    final path = p.join(documentsDirectory.path, StringsManager.productsFile);
     return openDatabase(
       path,
       onCreate: (db, version) {
-        return db.execute(
-          'CREATE TABLE products(id INTEGER PRIMARY KEY, name TEXT, price TEXT, priceAfterDiscount TEXT, image BLOB)',
-        );
+        return db.execute(StringsManager.productsSQLStatement);
       },
       version: 1,
     );
@@ -30,7 +29,7 @@ class ProductsRemoteDsImpl implements ProductsRemoteDS {
     await db.transaction((txn) async {
       for (Product product in await DummyData.getProducts()) {
         await txn.insert(
-          'products',
+          StringsManager.products,
           product.toMap(),
           conflictAlgorithm: ConflictAlgorithm.replace,
         );
@@ -43,7 +42,9 @@ class ProductsRemoteDsImpl implements ProductsRemoteDS {
     final db = await openProductsDB();
     await insertProduct();
 
-    final List<Map<String, dynamic>> maps = await db.query('products');
+    final List<Map<String, dynamic>> maps = await db.query(
+      StringsManager.products,
+    );
     return List.generate(maps.length, (i) {
       return Product.fromMap(maps[i]);
     });

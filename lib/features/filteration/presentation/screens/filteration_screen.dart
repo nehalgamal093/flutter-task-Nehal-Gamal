@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:otex_app/core/utils/color_manager.dart';
+import 'package:otex_app/features/filteration/presentation/widgets/filtration_app_bar.dart';
 import 'package:otex_app/features/filteration/presentation/widgets/location_section.dart';
 import 'package:otex_app/features/filteration/presentation/widgets/main_label.dart';
 import 'package:otex_app/features/filteration/presentation/widgets/monthly_installments.dart';
@@ -9,9 +10,7 @@ import 'package:otex_app/features/filteration/presentation/widgets/real_estate.d
 import 'package:otex_app/features/filteration/presentation/widgets/rooms_number.dart';
 import 'package:otex_app/features/filteration/presentation/widgets/status_section.dart';
 import 'package:otex_app/features/filteration/presentation/widgets/type_section.dart';
-
 import '../../../../core/utils/app_text_style.dart';
-import '../../../../core/utils/assets_manager.dart';
 import '../../../../core/utils/strings_manager.dart';
 
 class FiltrationScreen extends StatelessWidget {
@@ -19,50 +18,15 @@ class FiltrationScreen extends StatelessWidget {
   static const String routeName = '/filtration';
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        bottom: PreferredSize(
-          preferredSize: Size(size.width, size.height * .05),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            child: Directionality(
-              textDirection: TextDirection.rtl,
-              child: Row(
-                children: [
-                  ImageIcon(
-                    AssetImage(AssetsManager.close),
-                    color: ColorManager.darkBlueClr,
-                    size: 9,
-                  ),
-                  SizedBox(width: 20),
-                  Text(
-                    StringsManager.filteration,
-                    style: AppTextStyles.mediumTextStyle(
-                      color: ColorManager.darkGreyClr,
-                      fontSize: 24,
-                    ),
-                  ),
-                  Spacer(),
-                  Text(
-                    StringsManager.goBackDefault,
-                    style: AppTextStyles.boldTextStyle(
-                      color: ColorManager.cBlueColor,
-                      fontSize: 16,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
+      appBar: AppBar(bottom: filtrationAppBar(context)),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Directionality(
           textDirection: TextDirection.rtl,
           child: ListView(
             children: [
+              SizedBox(height: 30),
               MainLabel(text: StringsManager.category),
               SizedBox(height: 12),
               RealEstate(),

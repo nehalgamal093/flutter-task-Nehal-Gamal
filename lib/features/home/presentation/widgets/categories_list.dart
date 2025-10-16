@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:otex_app/core/di/di.dart';
+import 'package:otex_app/core/utils/strings_manager.dart';
 import 'package:otex_app/features/home/presentation/cubit/categories_cubit/categories_cubit.dart';
 
 import 'category_item.dart';
@@ -30,13 +31,13 @@ class CategoriesList extends StatelessWidget {
 
                   itemCount: state.categories.length,
                   itemBuilder: (context, index) {
-                    return CategoryItem(category: state.categories[index],);
+                    return CategoryItem(category: state.categories[index],selected: index==0,);
                   },
                 ),
               ),
             );
           } else {
-            return Text('Error');
+            return Text(StringsManager.error);
           }
         },
       ),

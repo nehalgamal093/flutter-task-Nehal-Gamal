@@ -34,6 +34,6 @@ class LocationSection extends StatelessWidget {
         color: ColorManager.darkBlueClr,
       ),
     );
-    ;
+
   }
 }

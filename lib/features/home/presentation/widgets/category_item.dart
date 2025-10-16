@@ -5,12 +5,18 @@ import 'package:otex_app/features/home/data/models/category.dart';
 
 class CategoryItem extends StatelessWidget {
   final Category category;
-  const CategoryItem({super.key,required this.category});
+  final bool selected;
+  const CategoryItem({
+    super.key,
+    required this.category,
+    required this.selected,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        color: selected ? ColorManager.lightOrangeClr : ColorManager.whiteClr,
         border: Border.all(color: ColorManager.veryLightGrey, width: 1),
         borderRadius: BorderRadius.all(Radius.circular(4)),
       ),
@@ -20,7 +26,8 @@ class CategoryItem extends StatelessWidget {
           category.name,
           style: AppTextStyles.mediumTextStyle(
             fontSize: 14,
-            color: ColorManager.orangeClr,
+
+            color: selected ? ColorManager.orangeClr : ColorManager.greyClr,
           ),
         ),
       ),

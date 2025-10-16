@@ -20,9 +20,27 @@ class SalesTeam extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(StringsManager.packageSpecialForYou,style: AppTextStyles.mediumTextStyle(fontSize: 14,color: ColorManager.darkBlueClr),),
-            Text(StringsManager.contactUs,style: AppTextStyles.regularTextStyle(fontSize: 12,color: ColorManager.darkBlueClr),),
-            Text(StringsManager.salesTeam,style: AppTextStyles.boldTextStyle(fontSize: 16,color: ColorManager.cBlueColor),),
+            Text(
+              StringsManager.packageSpecialForYou,
+              style: AppTextStyles.mediumTextStyle(
+                fontSize: 14,
+                color: ColorManager.darkBlueClr,
+              ),
+            ),
+            Text(
+              StringsManager.contactUs,
+              style: AppTextStyles.regularTextStyle(
+                fontSize: 12,
+                color: ColorManager.darkBlueClr,
+              ),
+            ),
+            Text(
+              StringsManager.salesTeam,
+              style: AppTextStyles.boldTextStyle(
+                fontSize: 16,
+                color: ColorManager.cBlueColor,
+              ),
+            ),
           ],
         ),
       ),

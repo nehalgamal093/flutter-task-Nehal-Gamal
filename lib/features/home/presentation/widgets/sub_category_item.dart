@@ -1,8 +1,5 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:otex_app/core/utils/app_text_style.dart';
-import 'package:otex_app/core/utils/assets_manager.dart';
 import 'package:otex_app/core/utils/color_manager.dart';
 import 'package:otex_app/features/home/data/models/sub_category.dart';
 

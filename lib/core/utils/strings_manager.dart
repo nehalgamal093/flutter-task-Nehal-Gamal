@@ -1,30 +1,43 @@
 class StringsManager{
+  //home
   static const String discover = 'أستكشف العروض';
   static const String all = 'الكل';
+  //categories
   static const String allOffers = 'كل العروض';
   static const String clothes = 'ملابس';
   static const String accessories = 'اكسسوارات';
   static const String electronics = 'الكترونيات';
+
+  //sub-categories
   static const String menWear = 'موضة رجالي';
   static const String watches = 'ساعات';
   static const String mobiles = 'موبايلات';
   static const String cosmetics = 'منتجات تجميل';
+
+  //free-delivery
   static const String freeDelivery = 'شحن مجاني';
   static const String forAnyOffer = 'لأي عرض تطلبه دلوقتي !';
+
+  //product-item
   static const String sold = 'تم بيع ';
-  static const String jackOfWool = 'جاكيت من الصوف مناسب';
-  static const String main = 'أساسية';
+  static const String le = 'جم';
+  static const String slash = '/';
+  static const String threeK = '3.3k';
+
+ //bottom-nav-labels
+  static const String mainPage = 'الرئيسية';
   static const String chat = 'محادثة';
   static const String addAd = 'أضف أعلان';
-  static const String next = 'التالي';
   static const String myAds = 'أعلاناتي';
   static const String myAccount = 'حسابي';
-  static const String choosePackage = 'أختر الباقات اللي تناسبك';
-  static const String chooseSpecialPackages = 'اختار من باقات التمييز بل أسفل اللي تناسب أحتياجاتك';
-  static const String packageSpecialForYou = 'باقات مخصصة لك';
-  static const String contactUs = 'تواصل معنا لأختيار الباقة المناسبة لك';
-  static const String salesTeam = 'فريق المبيعات';
-  static const String filteration = 'فلترة';
+
+  //product-details
+  static const String jackOfWool = 'جاكيت من الصوف مناسب';
+  static const String next = 'التالي';
+
+
+  //filtration
+  static const String filtration = 'فلترة';
   static const String goBackDefault = 'رجوع للأفتراضي';
   static const String category = 'الفئة';
   static const String realEstate = 'عقارات';
@@ -34,7 +47,6 @@ class StringsManager{
   static const String egypt = 'مصر';
   static const String monthlyInstall = 'الأقساط الشهرية';
   static const String type = 'النوع';
-
   static const String twinHouse = 'توين هاوس';
   static const String villa = 'فيلا منفصلة';
   static const String townHouse = 'تاون هاوس';
@@ -68,5 +80,32 @@ class StringsManager{
   static const String next48Hour = ' (خلال ال48 ساعة القادمة)';
   static const String fixAgentInG = 'تثبيت فى مقاول صحى فى الجهراء';
   static const String doubleViews = 'ضعف عدد المشاهدات';
+  static const String main = 'أساسية';
+  static const String choosePackage = 'أختر الباقات اللي تناسبك';
+  static const String chooseSpecialPackages = 'اختار من باقات التمييز بل أسفل اللي تناسب أحتياجاتك';
+  static const String packageSpecialForYou = 'باقات مخصصة لك';
+  static const String contactUs = 'تواصل معنا لأختيار الباقة المناسبة لك';
+  static const String salesTeam = 'فريق المبيعات';
 
+  //statements
+  static const String productsSQLStatement = 'CREATE TABLE products(id INTEGER PRIMARY KEY, name TEXT, price TEXT, priceAfterDiscount TEXT, image BLOB)';
+  static const String categoriesSQLStatement = 'CREATE TABLE categories(id INTEGER PRIMARY KEY, name TEXT)';
+  static const String subCategoriesSQLStatement ='CREATE TABLE subCategories(id INTEGER PRIMARY KEY, name TEXT,image BLOB)';
+  static const String packagesSQLStatement ='CREATE TABLE packages(id INTEGER PRIMARY KEY, name TEXT,price TEXT, expiration INTEGER, upList INTEGER,fixAgent INTEGER,allEgypt INTEGER, specialAd INTEGER, fixAgentInG INTEGER, selected INTEGER, image BLOB)';
+
+  //files
+  static const String productsFile ='products.db';
+  static const String categoriesFile ='categories.db';
+  static const String subCategoryFile ='subcategories.db';
+  static const String packagesFile ='packages.db';
+  //table-names
+  static const String products ='products';
+  static const String subCategories ='subcategories';
+  static const String categories ='categories';
+  static const String packages ='packages';
+
+  static const String error ='Something went wrong';
+  static const String g ='ج';
+  static const String m ='م';
+  static const String point ='.';
 }

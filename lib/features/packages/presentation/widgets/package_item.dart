@@ -42,9 +42,35 @@ class PackageItem extends StatelessWidget {
                   Spacer(),
                   Text(
                     package.price,
+
                     style: AppTextStyles.boldTextStyle(
                       fontSize: 16,
-                      decoration: TextDecoration.overline,
+                      decoration: TextDecoration.underline,
+                      color: ColorManager.orangeClr,
+                    ),
+                  ),
+                  Text(
+                    StringsManager.g,
+
+                    style: AppTextStyles.boldTextStyle(
+                      fontSize: 16,
+                      color: ColorManager.orangeClr,
+                    ),
+                  ),
+                  Text(
+                    StringsManager.point,
+
+                    style: AppTextStyles.boldTextStyle(
+                      fontSize: 16,
+                      decoration: TextDecoration.underline,
+                      color: ColorManager.orangeClr,
+                    ),
+                  ),
+                  Text(
+                    StringsManager.m,
+
+                    style: AppTextStyles.boldTextStyle(
+                      fontSize: 16,
                       color: ColorManager.orangeClr,
                     ),
                   ),
@@ -101,13 +127,6 @@ class PackageItem extends StatelessWidget {
                                 desc: StringsManager.fixAgentInG,
                               )
                             : SizedBox(),
-                        package.fixAgent == 1
-                            ? FeatureItem(
-                                icon: AssetsManager.pin,
-                                desc: StringsManager.fixAgent,
-                                sub: StringsManager.next48Hour,
-                              )
-                            : SizedBox(),
                       ],
                     ),
                   ),
@@ -118,13 +137,15 @@ class PackageItem extends StatelessWidget {
                         package.name == StringsManager.main
                             ? SizedBox()
                             : Image.memory(package.image),
-                        Text(
-                          StringsManager.doubleViews,
-                          style: AppTextStyles.regularTextStyle(
-                            fontSize: 12,
-                            color: ColorManager.darkBlueClr,
-                          ),
-                        ),
+                        package.name == StringsManager.main
+                            ? SizedBox()
+                            : Text(
+                                StringsManager.doubleViews,
+                                style: AppTextStyles.regularTextStyle(
+                                  fontSize: 12,
+                                  color: ColorManager.darkBlueClr,
+                                ),
+                              ),
                       ],
                     ),
                   ),

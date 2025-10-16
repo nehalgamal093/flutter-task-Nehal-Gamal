@@ -13,11 +13,15 @@ class CustomTextField extends StatelessWidget {
 
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: AppTextStyles.mediumTextStyle(fontSize: 14,color: ColorManager.darkGreyClr),
+        hintStyle: AppTextStyles.mediumTextStyle(fontSize: 14,color: ColorManager.lightGreyClr),
         border:  OutlineInputBorder(
             borderSide: BorderSide( color: ColorManager.veryLightGrey, width: 1),
             borderRadius: BorderRadius.all(Radius.circular(8))
         ),
+        enabledBorder:  OutlineInputBorder(
+            borderSide: BorderSide( color: ColorManager.veryLightGrey, width: 1),
+            borderRadius: BorderRadius.all(Radius.circular(8))
+        ) ,
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide( color: ColorManager.veryLightGrey, width: 1),
           borderRadius: BorderRadius.all(Radius.circular(8))

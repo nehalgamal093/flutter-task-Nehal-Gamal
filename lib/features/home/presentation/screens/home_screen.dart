@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:otex_app/core/utils/app_text_style.dart';
-import 'package:otex_app/core/utils/assets_manager.dart';
-import 'package:otex_app/core/utils/color_manager.dart';
 import 'package:otex_app/core/utils/strings_manager.dart';
-import 'package:otex_app/features/filteration/presentation/screens/filteration_screen.dart';
 import 'package:otex_app/features/home/presentation/widgets/categories_list.dart';
 import 'package:otex_app/features/home/presentation/widgets/free_delivery.dart';
+import 'package:otex_app/features/home/presentation/widgets/home_app_bar.dart';
 import 'package:otex_app/features/home/presentation/widgets/products_list.dart';
 import 'package:otex_app/features/home/presentation/widgets/sub_category_list.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,43 +15,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        bottom: PreferredSize(
-          preferredSize: Size(size.width, size.height * .05),
-          child: InkWell(
-            onTap: () {
-              Navigator.pushNamed(context, FiltrationScreen.routeName);
-            },
-            child: Row(
-              children: [
-                SizedBox(width: 16),
-                ImageIcon(
-                  AssetImage(AssetsManager.arrowBack),
-                  color: ColorManager.darkGreyClr,
-                  size: 16,
-                ),
-                SizedBox(width: 8),
-                Text(
-                  StringsManager.all,
-                  style: AppTextStyles.boldTextStyle(
-                    color: ColorManager.darkGreyClr,
-
-                  ),
-                ),
-                Spacer(),
-                Text(
-                  StringsManager.discover,
-                  style: AppTextStyles.mediumTextStyle(
-                    color: ColorManager.darkBlueClr,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
+      appBar: AppBar(bottom: homeAppBar(context)),
       body: BlocProvider(
         create: (context) => getIt<ProductsCubit>()..getProducts(),
         child: BlocBuilder<ProductsCubit, ProductsState>(
@@ -74,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               );
             } else {
-              return Text('Error');
+              return Text(StringsManager.error);
             }
           },
         ),

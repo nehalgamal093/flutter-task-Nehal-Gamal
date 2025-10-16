@@ -85,9 +85,10 @@ flutter:
   fonts:
     - family: Tajawal
       fonts:
-        - asset: assets/fonts/Tajawal-Regular.ttf
+        - asset: assets/fonts/Tajawal-Medium.ttf
         - asset: assets/fonts/Tajawal-Bold.ttf
-          weight: 900
+        - asset: assets/fonts/Regular-Bold.ttf
+
 
 
   # For details regarding fonts from package dependencies,

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:otex_app/core/utils/app_text_style.dart';
-import 'package:otex_app/core/utils/color_manager.dart';
 import 'package:otex_app/core/utils/strings_manager.dart';
-import 'package:otex_app/features/filteration/presentation/screens/filteration_screen.dart';
 import 'package:otex_app/features/home/presentation/screens/home_screen.dart';
 import 'package:otex_app/features/main/presentation/provider/change_index.dart';
+import 'package:otex_app/features/main/presentation/widgets/custom_bottom_nav_item.dart';
 import 'package:otex_app/features/packages/presentation/screens/packages_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -27,53 +25,60 @@ class _MainScreenState extends State<MainScreen> {
         padding: const EdgeInsets.only(right: 16),
         child: screens[provider.index],
       ),
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: provider.index,
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: ColorManager.darkBlueClr,
-        unselectedItemColor: ColorManager.lightGreyClr,
-
-        unselectedLabelStyle: AppTextStyles.mediumTextStyle(
-          fontSize: 12,
-          color: ColorManager.darkBlueClr,
-        ),
-
-        selectedLabelStyle: AppTextStyles.mediumTextStyle(
-          fontSize: 12,
-          color: ColorManager.darkBlueClr,
-        ),
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         onTap: (index) {
           provider.changeIndex(index);
         },
         items: [
           BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage(AssetsManager.account)),
+            icon: CustomBottomNavItem(
+              icon: AssetsManager.account,
+              label: StringsManager.myAccount,
+              index: 0,
+              currIndex: provider.index,
+            ),
             label: StringsManager.myAccount,
           ),
           BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage(AssetsManager.dataSet)),
+            icon: CustomBottomNavItem(
+              icon: AssetsManager.dataSet,
+              label: StringsManager.myAds,
+              index: 1,
+              currIndex: provider.index,
+            ),
             label: StringsManager.myAds,
           ),
+
           BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage(AssetsManager.addBox),
-              color: ColorManager.blueClr,
+            icon: CustomBottomNavItem(
+              icon: AssetsManager.addBox,
+              label: StringsManager.addAd,
+              index: 2,
+              currIndex: provider.index,
             ),
             label: StringsManager.addAd,
           ),
           BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage(AssetsManager.chat),
-
+            icon: CustomBottomNavItem(
+              icon: AssetsManager.chat,
+              label: StringsManager.chat,
+              index: 3,
+              currIndex: provider.index,
             ),
             label: StringsManager.chat,
           ),
           BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage(AssetsManager.home),
-
+            icon: CustomBottomNavItem(
+              icon: AssetsManager.home,
+              label: StringsManager.mainPage,
+              index: 4,
+              currIndex: provider.index,
             ),
-            label: StringsManager.main,
+            label: StringsManager.mainPage,
           ),
         ],
       ),
