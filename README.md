@@ -4,10 +4,10 @@ Flutter Task
 
 ## Tools
 
-###Clean architecture
-###OOP
-###Injectable
-###Cubit
-###Provider
-###Sqlite
+`Clean architecture`
+`OOP`
+`Injectable`
+`Cubit`
+`Provider`
+`Sqlite`
 
